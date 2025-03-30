@@ -37,6 +37,7 @@ if st.session_state.step == 1:
         st.session_state.departure_date = departure
         st.session_state.step = 2
         st.experimental_rerun()
+        st.stop()
 
 # --- Step 2: Ask for Destination ---
 elif st.session_state.step == 2:
@@ -46,6 +47,7 @@ elif st.session_state.step == 2:
         st.session_state.destination = destination
         st.session_state.step = 3
         st.experimental_rerun()
+        st.stop()
 
 # --- Step 3: Ask for Airline ---
 elif st.session_state.step == 3:
@@ -55,6 +57,7 @@ elif st.session_state.step == 3:
         st.session_state.airline = airline
         st.session_state.step = 4
         st.experimental_rerun()
+        st.stop()
 
 # --- Step 4: Show Summary ---
 elif st.session_state.step == 4:
@@ -68,3 +71,4 @@ elif st.session_state.step == 4:
         for key in ["step", "departure_date", "destination", "airline"]:
             st.session_state[key] = None if key != "step" else 1
         st.experimental_rerun()
+        st.stop()

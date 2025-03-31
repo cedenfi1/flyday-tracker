@@ -6,15 +6,23 @@ import difflib
 st.set_page_config(page_title="Flyday Assistant", layout="centered")
 st.markdown("""
     <style>
-        .main { padding: 2rem; }
-        .stApp { background-color: #f7f9fc; font-family: 'Segoe UI', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { color: #2c3e50; }
-        .stButton > button { background-color: #3498db; color: white; border-radius: 5px; }
-        .stDownloadButton > button { background-color: #27ae60; color: white; border-radius: 5px; }
-        .stTextInput > div > input { border-radius: 5px; }
-        .stDateInput > div, .stTimeInput > div { border-radius: 5px; }
-        .css-1aumxhk { font-size: 1.1rem; }
-    </style>
+    .main { padding: 1rem; max-width: 400px; margin: 0 auto; }
+    .stApp { background-color: #f7f9fc; font-family: 'Segoe UI', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { color: #2c3e50; }
+    .stButton > button, .stDownloadButton > button {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+    .stButton > button { background-color: #3498db; color: white; }
+    .stDownloadButton > button { background-color: #27ae60; color: white; }
+    .stTextInput > div > input,
+    .stDateInput > div,
+    .stTimeInput > div,
+    .stSelectbox > div { border-radius: 8px; font-size: 1rem; }
+    .css-1aumxhk { font-size: 1rem; }
+</style>
 """, unsafe_allow_html=True)
 
 # --- Major US Airports (Further Expanded) ---

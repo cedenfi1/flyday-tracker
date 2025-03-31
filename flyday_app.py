@@ -4,6 +4,18 @@ import difflib
 
 # --- App Setup ---
 st.set_page_config(page_title="Flyday Assistant", layout="centered")
+st.markdown("""
+    <style>
+        .main { padding: 2rem; }
+        .stApp { background-color: #f7f9fc; font-family: 'Segoe UI', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { color: #2c3e50; }
+        .stButton > button { background-color: #3498db; color: white; border-radius: 5px; }
+        .stDownloadButton > button { background-color: #27ae60; color: white; border-radius: 5px; }
+        .stTextInput > div > input { border-radius: 5px; }
+        .stDateInput > div, .stTimeInput > div { border-radius: 5px; }
+        .css-1aumxhk { font-size: 1.1rem; }
+    </style>
+""", unsafe_allow_html=True)
 
 # --- Major US Airports (Further Expanded) ---
 AIRPORTS = sorted([
@@ -95,7 +107,14 @@ elif st.session_state.step == 4:
     st.write(f"📋 **Boarding Time:** {boarding_time} ({boarding_minutes} minutes before departure)")
 
     st.subheader("📦 Suggested Packing List")
-    st.markdown("- Travel documents\n- ID/passport\n- Snacks\n- Headphones\n- Phone charger\n- Reusable water bottle")
+    st.markdown("""
+    - 🧳 Travel documents
+    - 🪪 ID/passport
+    - 🍫 Snacks
+    - 🎧 Headphones
+    - 🔌 Phone charger
+    - 💧 Reusable water bottle
+    """)
 
     st.session_state.history.append({
         "date": st.session_state.departure_date,
